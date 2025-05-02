@@ -32,20 +32,19 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-// |  SHIFT|  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |RGB_TOG|  N   |  M    |  ,    |  .   |   /   | SHIFT |
+// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   +   |
+// |  TAB  |  '  |  ,  |  .   |  P   |  Y   |                   |  F   |  G    |  C    |  R   |   L   |   /   |
+// |  SHIFT|  A  |  O  |  E   |  U   |  I   |                   |  D   |  H    |  T    |  N   |   S   |   -   |
+// | CTRL |   ;  |  Q  |  J   |  K   |  X   |  MUTE  |  |RGB_TOG|  B   |  M    |  W    |  V   |   Z   | SHIFT |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | BSPC| RAISE  | GUI   |
             bindings = <
-&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
-&kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
-&kp LSHFT &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-&kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  &kp C_MUTE   &rgb_ug RGB_TOG  &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp EQUAL
+&kp TAB   &kp SQT  &kp COMMA  &kp DOT    &kp P    &kp Y                      &kp F  &kp G    &kp C     &kp R   &kp L    &kp FSLH
+&kp LSHFT &kp A  &kp O  &kp E    &kp U    &kp I                      &kp D  &kp H    &kp T     &kp N   &kp S &kp MINUS
+&kp LCTRL &kp SEMI  &kp Q  &kp J    &kp K    &kp X  &kp C_MUTE   &rgb_ug RGB_TOG  &kp B  &kp M    &kp W &kp V &kp Z &kp RSHFT
                         &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &kp BSPC  &mo 2 &kp RGUI
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
+                    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
         };
 
         lower_layer {
@@ -85,19 +84,20 @@
         
         layer_3 {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   +   |
-// |  TAB  |  '  |  ,  |  .   |  P   |  Y   |                   |  F   |  G    |  C    |  R   |   L   |   /   |
-// |  SHIFT|  A  |  O  |  E   |  U   |  I   |                   |  D   |  H    |  T    |  N   |   S   |   -   |
-// | CTRL |   ;  |  Q  |  J   |  K   |  X   |  MUTE  |  |RGB_TOG|  B   |  M    |  W    |  V   |   Z   | SHIFT |
+// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+// |  SHIFT|  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |RGB_TOG|  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | BSPC| RAISE  | GUI   |
             bindings = <
-&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp EQUAL
-&kp TAB   &kp SQT  &kp COMMA  &kp DOT    &kp P    &kp Y                      &kp F  &kp G    &kp C     &kp R   &kp L    &kp FSLH
-&kp LSHFT &kp A  &kp O  &kp E    &kp U    &kp I                      &kp D  &kp H    &kp T     &kp N   &kp S &kp MINUS
-&kp LCTRL &kp SEMI  &kp Q  &kp J    &kp K    &kp X  &kp C_MUTE   &rgb_ug RGB_TOG  &kp B  &kp M    &kp W &kp V &kp Z &kp RSHFT
+&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
+&kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
+&kp LSHFT &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+&kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  &kp C_MUTE   &rgb_ug RGB_TOG  &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                         &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &kp BSPC  &mo 2 &kp RGUI
             >;
-                    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
                 };
 //         extra1 { status = "reserved"; };
 //
